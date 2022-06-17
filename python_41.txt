@@ -1,0 +1,670 @@
+Hailemariam Mengesha    0593/10
+###############################################################1
+'''def cube():
+    number = int(input('Enter your number: '))
+    result = number*number * number
+    print(result)
+cube()'''
+
+##############################################################2
+'''def triangle():
+    w = float(input('Enter the value of base: '))
+    h = float(input('Enter the value of base: '))
+    area = 0.50 * w * h
+    print(area)
+triangle()'''
+##################################################################3
+'''def rectangle():
+    w = float(input('Enter the value of the width of rectangle: '))
+    h = float(input('Enter the value of the height of rectangle: '))
+    area = w * h
+    print(area)
+rectangle()'''
+##################################################################4
+'''def Line():
+    m = float(input('Enter the slope of the line: '))
+    b = float(input('Entert the x-intercept of the line: '))
+    x = float(
+        input('Enter the value of x-coordinate: '))
+    y = m * x + b
+    print(y)
+Line()'''
+##################################################################5
+'''def Intersect(m1,b1,m2, b2):
+    # if they intersect they will have at least one same(x,y) value
+    # y=m1x+b1 and y=m2x+b2
+    # m1x+b1=m2x+b2
+    # if the intersect they will intersect at x=(b2-b1)/(m1-m2)
+    x = (b2 - b1) / (m1 - m2)
+    y1 = m1 * x + b1
+    y2 = m2 * x + b2
+    if (y1 == y2):
+        print('1')
+    else:
+        print('0')
+Intersect(1,4,3,6)'''
+###################################################################6
+'''def factorial():
+       num = int(input("Enter a number: "))    
+       factorial = 1
+       if num < 0:
+           print("Factorial does not exist for negative numbers")
+       elif num == 0:
+         print("The factorial of 0 is 1")
+       else:
+        for i in range(1,num + 1):
+         factorial = factorial*i
+       print("The factorial of",num,"is",factorial)
+factorial()'''
+#####################################################################7
+'''def fibonacci():
+	n_terms = int(input("How many terms? "))
+  # first two terms
+	n1, n2 = 0, 1
+	count = 0
+	if n_terms <= 0:
+		print("Please enter a positive integer")
+	elif n_terms == 1:
+		print("Fibonacci sequence upto",n_terms,":")
+		print(n1)
+# generate fibonacci sequence
+	else:
+  		print("Fibonacci sequence:")
+		while count < nterms:
+		print(n1)
+		nth = n1 + n2
+			# update values
+			n1 = n2
+			n2 = nth
+			count += 1
+fibonacci()'''
+####################################################################8.a
+'''def prime():
+    x = int(input('Enter a number :'))
+ 
+	if x < 1:
+		print('not a prime number')
+ 	else:
+     	for i in range(2, x):
+            if (x % i == 0):
+                print('not a prime number')
+                break
+            else:
+                print('prime number')
+                break
+prime()'''
+##################################################################8.b
+'''def sum_digit ():
+    n=int(input("Enter a number:"))
+  	total=0
+  	while(n>0):
+		dig=n%10
+		total=total+dig
+		n=n//10
+	print("The total sum of digits is:",tot)
+sum_digit()'''
+####################################################################9
+'''def ascend():
+    arr = []
+    a = int(input('Enter the amount of numbers to insert:'))
+    for k in range(a):
+        y = int(input('Enter the numbers to be sorted:'))
+        arr.append(y)
+
+    w = 0
+    print("Elements of original array: ")
+    for i in range(a):
+        print(arr[i], end=" ")
+
+    for i in range(0, len(arr)):
+        for j in range(i + 1, len(arr)):
+            if (arr[i] > arr[j]):
+                w = arr[i]
+                arr[i] = arr[j]
+                arr[j] = w
+
+    print("the ascending order of numbers is: ")
+    for i in range(0, len(arr)):
+        print(arr[i], end=" ")
+	ascend'''
+
+######################################################################10
+'''def score():
+    k = int(input('Enter the amount of the students :'))
+    mark = []
+    counter = 0
+
+    for i in range(k):
+        num = int(input("enter the marks :"))
+        mark.append(num)
+
+    for j in range(k):
+        if (mark[j] > 20):
+            counter = counter + 1
+
+    print('Number of students that scored above 20 is ', counter)
+score()'''
+######################################################################11
+'''def mobile():
+    contact_number = int(input("enter the 9 digit contact number==>"))
+    if (contact_number // 100000000 == 0 or contact_number // 100000000 > 9):
+        print('Invalid Input')
+    elif (contact_number // 100000000 == 9):
+        print("mobile")
+    else:
+        print("fixed phone")
+mobile()'''
+#######################################################################12
+'''def maxmin():
+    z = int(input('Enter the amount of the number:'))
+    list = []
+
+    for i in range(z):
+        v = int(input("write the numbers :"))
+        list.append(v)
+    min = max = list[0]
+    for i in range(z):
+        if (list[i] > max):
+            max = list[i]
+        if (list[i] < min):
+            min = list[i]
+    print('Maximum is==> ', max)
+    print('Minimum is==> ', min)
+maxmin()'''
+#######################################################################13
+'''def reverse():
+    z= int(input("Enter the number that is goining to be reversed:"))
+    reverse = 0
+    while (z > 0):
+        y = z % 10
+        reverse = reverse * 10 + y
+        z = z // 10
+    print('reversed number is: ', reverse)
+reverse()'''
+########################################################################14
+'''def Compute_GCF():
+    a = int(input('enter the first number : '))
+    b = int(input('enter the second number :'))
+    if a > b:
+        small = a
+    else:
+        small = b
+    for i in range(1, small + 1):
+        if ((a % i == 0) and (b % i == 0)):
+            gcf = i
+
+    print("The GCF of the two number is: ", gcf)
+Compute_GCF()'''
+##########################################################################15
+'''def Compute_LCM():
+    x = int(input('Enter the first number : '))
+    y = int(input('Enter the second number :'))
+    for i in range(1, x * y + 1):
+        if ((i % x == 0) and (i % y == 0)):
+            print("The LCM is==>", i)
+			break
+
+Compute_LCM()'''
+##########################################################################16
+'''def compute_sum():
+    y = 0
+    for i in range(1, 99, 2):
+        v = i / (i + 2)
+        y = y + v
+        print(v)
+    print("the sum of the fraction is ==> ", y)
+compute_sum()'''
+###########################################################################17
+'''def booknum():
+        a = input("Enter nine digit number:")
+        if len(a) != 9:
+            print("Invalid,Input must be nine digit")
+            return
+        checksum = 0
+        temp = int(a)
+        for i in range(9, 0, -1):
+            digit = temp % 10
+            print(digit)
+            checksum += digit * i
+            print("ch", checksum)
+            temp = temp // 10
+            print("temp", temp)
+        checksum = checksum % 11
+        if checksum == 10:
+            checksum = "X"
+        print("ISBN :" + a + str(checksum))
+booknum()'''
+###########################################################################18
+'''import math
+def exp():
+    x = int(input('enter the value of x for e^x =>'))
+    sum = 0
+    for i in range(15):
+        a = x**i / math.factorial(i)
+        sum = sum + a
+
+    print(sum)
+exp()'''
+############################################################################19
+'''def leap_Year():
+    start_year = 2001
+  	end_year = 2100
+    count=0
+
+	if start_year < end_year:
+		print ("Here is a list of leap years between " + str(start_year) + " and " + str(end_year)  + ":")
+
+	for i in range(start_year,end_year+1):
+		if start_year % 400 == 0  or (start_year % 4 == 0 and start_year % 100 != 0):
+			count = count +1
+			if count%10 ==0:
+				print(start_year)
+			else:
+				print(start_year)	
+	
+			start_year += 1
+  	print("number of leepyear",count)
+leap_Year()'''
+###############################################################################20
+'''def frequent_times():
+       
+    z = int(input('Enter the number of students: '))
+    student = []
+    for i in range(z):
+        score = int(input('Enter the numbers to find max and its occurence :'))
+        student.append(score)
+    i = 0
+    max = student[0]
+    while i < z:
+        if (student[i] > max):
+            max = student[i]
+        i = i + 1
+
+    j = 0
+    counter = 0
+    while j < z:
+        if (student[j] == max):
+            counter = counter + 1
+        j = j + 1
+
+    print("The maximum of the numbers' is ", max)
+    print("It occurs ", counter, " times")
+    
+frequent_times()'''
+############################################################################21
+'''def compute_digit_cube():
+    small = 100
+    high = 1000
+    for a in range(small, high):
+        sum = 0
+        v = a
+        while v > 0:
+            digit = v % 10
+            v = v // 10
+            cube = digit**3
+            sum += cube
+        if a == sum:
+            print(a)
+compute_digit_cube()'''
+###########################################################################22
+'''def No_of_digit():
+    counter = 0
+    z = 1
+    while 1 == 1:
+        z = int(input('Enter a positive integer(negative number terminates) to find its number of digits'))
+        if (z < 0):
+            print("stopped")
+            break
+        else:
+            counter = 0
+            while (z > 0):
+                digit = z % 10
+                z = z // 10
+                counter = counter + 1
+            print(counter)
+No_of_digit()'''
+###############################################################################23
+'''def amount_prime():
+    counter = 0
+    z= int(input("enter the number "))
+    for x in range(z):
+        if x <= 1:
+            continue
+        for i in range(2, x):
+            if (x % i) == 0:
+                break
+        else:
+            counter += 1
+
+    print("The amount of prime numbers= ", counter)
+amount_prime()'''
+##################################################################################24
+'''def perfect_num():
+    sum = 0
+    k = int(input("enter the number "))
+    yy = []
+    for x in range(1, k):
+        if k % x == 0:
+            sum += x
+            yy.append(x)
+    if sum == k:
+        print("is a perfect number ")
+        print("divisors are", yy)
+    else:
+        print(" not a perfect number")
+perfect_num()'''
+######################################################################################25
+'''def Pn_Ave():
+    i = int( input ("Enter an integer,but ends if it is 0: "))
+    count_pos = 0
+    count_neg = 0
+    sum = 0
+    if (i != 0):
+        while (i != 0):
+            if (i > 0):
+                count_pos += 1
+            elif (i < 0):
+                count_neg += 1
+            sum += i
+            i = int( input ("Enter an interger, the input ends if it is 0: "))
+            count = count_pos + count_neg
+            average = sum / count
+
+        print ("The number of positives is", count_pos)
+        print ("The number of negatives is", count_neg)
+        print ("The total is", sum)
+        print ("The average is", float(average))
+    else:
+        print ("You didn't enter any number.")
+Pn_Ave()'''
+######################################################################################26
+'''def tut_Total():
+    total = 0
+    tuition = 10000
+    tuitionTenthYear = 0
+    
+    
+    for y in range(1,15):
+      
+        tuition += tuition * 0.05
+   
+        if y>10:
+            total +=tuition
+      
+        if y == 10:
+            tuitionTenthYear = tuition
+    print()
+    print("Tution in ten years: $", tuitionTenthYear)   
+    print("Total cost for four years' worth of" , 
+    "tuition after ten years: $", total)
+tut_Total()'''
+########################################################################################27
+'''def convert():
+    print("1.kg to pounds")
+    print("2.miles to km")
+    print("3.hour to minutes")
+    v = int(input("Enter the conversion type:"))
+
+    if (v == 1):
+        kilo = float(input("Enter the kg amount:"))
+        pound = 2.2 * kilo
+        print(kilo, "kilograms=", pound, "pounds")
+    elif (v == 2):
+        mile = float(input("Enter the amount of miles:"))
+        kilometers = 1.61 * mile
+        print(mile, "miles=", kilometers, "kilometers")
+    elif (v == 3):
+        hours = float(input("Enter the amount of hours:"))
+        minutes = 60 * hours
+        print(hours, "hours=", minutes, "minutes")
+    else:
+        print("Invalid number entered")
+convert()'''
+#########################################################################################28
+'''def scor_stud():
+    z = int(input('Enter the number of students: '))
+    student = []
+    for i in range(z):
+        name = input("Enter the name of students: ")
+        mark = int(input("Enter the score of the student: "))
+        student.append(name)
+        student.append(mark)
+    max1 = student[1]
+    for j in range(1, 2 * z, 2):
+        if (student[j] > max1):
+            max1 = student[j]
+            name = student[j - 1]
+    max2 = 0
+    for k in range(1, 2 * z, 2):
+        if (student[k] != max1):
+            if (student[k] > max2):
+                max2 = student[k]
+                name2 = student[k - 1]
+    print("1st place  is ", name, " and it scores:",
+          max1)
+    print("2nd place is ", name2, " and it scores:",
+          max2)
+scor_stud()'''
+############################################################################################29
+'''def stu():
+    z = int(input('Enter the number of students: '))
+    l = []
+    for i in range(z):
+        name = input("Enter the name of students: ")
+        score = int(input("Enter the score of the student: "))
+        l.append(name)
+        l.append(score)
+    max = l[1]
+    for j in range(1, 2 * z, 2):
+        if (l[j] > max):
+            max = l[j]
+            name = l[j - 1]
+    print("1st place is ", name, " and it scores:",
+          max)
+stu()'''
+###################################################################################30
+'''def fivesix():
+    num = 100
+    five_six = []
+    while num <= 200:
+        if ((num % 5 == 0) or (num % 6 == 0)):
+            if (num % 30 != 0):
+                five_six.append(num)
+    num = num + 1
+
+    for i in range(len(five_six)):
+        if i % 10 == 0:
+            print(five_six[i])
+        else:
+            print(five_six[i], end=" ")
+fivesix()'''
+#################################################################################31
+'''def ascii():
+    npr = 10
+    count = 0
+    for i in range(33, 127):
+         ++count
+         if count % npr ==0:
+               print(chr(i))
+         else:
+               print(chr(i),end="")
+ascii()'''
+##############################################################################32.a
+'''def r_tri():
+    r = 6
+    for i in range(1, r + 1):
+        for space in range(1, (r - i)):
+            print(" ", end="")
+        for symbol in range(i, 0, -1):
+            print("{0}".format(symbol), end="")
+
+        print()
+r_tri()'''
+##################################################################################32.b
+'''def uptri():
+    r = 6
+    for i in range(1, r + 2):
+        for space in range(1, i + 2):
+            print(" ", end="")
+        for symbol in range(1, r - i + 2):
+            print("{0}".format(symbol), end="")
+        print()
+uptri()'''
+################################################################33
+'''n=int(input('enter the value of number between 1 and 15: '))
+for i in range(1,n+1):
+	for j in range(1,n-i+1):
+		print(' ',end=' ')
+	for j in range(i,0,-1):
+		print(j,end=' ')
+	for j in range(2,i+1):
+		print(j,end=' ')
+	print()'''
+##################################################################34
+'''def pp():
+    l = []
+    for i in range(1, 9):
+        l.append([str(2**j) for j in range(i)])
+
+    b = len(l[-1])
+    buffers = [len(x) for x in l[-1]]
+
+    for line in l:
+        l = len(line)
+        line = [" "] * (b - len(line)) + line
+        out = []
+        for x, y in zip(line, buffers):
+            out.append(x.rjust(y))
+        print(" ".join(out + out[::-1][1:]))
+pp()'''
+##################################################################35
+'''import math
+def Loan():
+    loanAmount = int(input("Enter loan amount:"))
+    numberOfYears = int(input("Enter number of years: "))
+    annualInterestRate = 5000.0
+    print("Interest Rate", "     ", "Monthly Payment", "      ",
+          "Total Payment")
+    while (annualInterestRate <= 8000.0):
+        monthlyInterestRate = (annualInterestRate / 1000) / 1200
+        monthlyPayment = (
+            loanAmount * monthlyInterestRate /
+            (1 - 1 / math.pow(1 + monthlyInterestRate, numberOfYears * 12)) *
+            10)
+        totalPayment = (monthlyPayment * numberOfYears * 12)
+        print((annualInterestRate / 1000), "      ", monthlyPayment, "      ",
+              totalPayment)
+        annualInterestRate = annualInterestRate + 125.0
+Loan()'''
+################################################################36
+
+'''conversion_table={0:'0',1:'1',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'A',11:'B',12:'C',13:'D',14:'E',15:'F'}
+
+def decimal_to_hexadecimal(decimal):
+	hexadecimal=''
+	while(decimal>0):
+		remainder = decimal % 16
+		hexadecimal = conversion_table[remainder]+hexadecimal
+		decimal = decimal//16
+
+	return hexadecimal
+
+num = int(input('Enter your number:'))
+
+print('the hexadecimal form of ',num,'is ',decimal_to_hexadecimal(num))'''
+
+##################################################################37
+'''import math
+n=int(input("Enter the number of terms: "))
+def factorial():
+	eu_sum=1
+	for i in range(1,n+1):
+	    eu_sum=eu_sum+(1/math.factorial(i))
+	print("The sum of series is",round(eu_sum,2))
+factorial()'''
+
+
+##################################################################38
+'''num=int(input('Enter your number:'))
+def isPrime():
+	if num >1:
+		for i in range(2,num):
+			if num % 2 ==0:
+				print(num,"is not a prime number!")
+				break
+			else:
+				print(num,'is a prime number!')
+				break
+	else:
+		print(num,'is not a prime number!')
+
+
+isPrime()'''
+
+
+
+
+##################################################################39
+'''num=int(input("Enter your number:"))
+
+def isEven():
+	if num % 2 ==0:
+		print("the number is even")
+	else:
+		print("the number is not even")
+isEven()'''
+##################################################################40
+'''def calc():
+    
+    def sum():
+        print('Sum is ', a + b)
+
+    def product():
+        print('Product is ', a * b)
+
+    def quoitient():
+        if (b != 0):
+            print('quoitient is ', a / b)
+        else:
+            print('Division by zero not possible')
+
+    def difference():
+        print('Difference is ', a - b)
+
+    a = int(input('Enter the first number: '))
+    b = int(input('Enter the second number: '))
+    print('1.Add')
+    print('2.Multiply')
+    print('3.Divid')
+    print('4.Subtract')
+    l = int(input('Select op.:'))
+
+    if l <= 0 or l > 4:
+        print('enter a valid number')
+    else:
+        if (l == 1):
+            sum()
+        elif (l == 2):
+            product()
+        elif (l == 3):
+            quoitient()
+        else:
+            difference()
+ calc()'''
+##################################################################41
+'''
+n = int(input("Enter the value of n: "))
+sum=0
+
+for i in range(1,n+1):
+    factorial=1
+    for j in range(1,i+1):
+        factorial=factorial*j
+    
+    sum=sum+factorial
+    print(str(i) + "!", end="")
+    if i != n:
+        print("+", end="")
+
+print("="+str(sum))
+'''
